@@ -11,7 +11,23 @@ export default function NavigationBar({ fixed }) {
         <Navbar bg="light" expand={false} fixed={fixed}>
             <Container>
                 <Navbar.Brand as={Link} to="/">
-                    Hans Rosling-er
+                    <img
+                        src="/logo.png"
+                        width="40"
+                        height="40"
+                        className="d-inline-block align-top"
+                        alt="React Bootstrap logo"
+                    />
+                    {"   "}
+                    <span style={
+                        {
+                            fontStyle: "normal",
+                            fontWeight: "bold",
+                            fontSize: "24px",
+                            lineHeight: "45px",
+                            color: "#000000"
+                        }
+                    }>Augmented Data Presentation</span>
                 </Navbar.Brand>
                 {currentUser && (
                     <div>

@@ -33,9 +33,11 @@ export default function CopyToClipboardButton({
     return (
         <Button
             onClick={handleCopyClick}
-            variant={isCopied ? "success" : "primary"}
+            variant={isCopied ? "success" : "outline-secondary"}
             {...props}
         >
+            <i class="bi bi-copy"></i>
+            {" "}
             <span>{isCopied ? onSuccessText : defaultText}</span>
         </Button>
     );

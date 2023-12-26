@@ -7,7 +7,8 @@ import {
     Redirect,
 } from "react-router-dom";
 import Dashboard from "./Dashboard";
-import Display from "./Display";
+import ChartDesign from "./design/ChartDesign";
+import SlideShow from "./design/SlideShow";
 
 import Signup from "./authentication/Signup";
 import Login from "./authentication/Login";
@@ -21,8 +22,14 @@ const App = () => {
             <Router>
                 <AuthProvider>
                     <Switch>
-                        <PrivateRoute exact path="/display">
+                        {/* <PrivateRoute exact path="/display">
                             <Display />
+                        </PrivateRoute> */}
+                        <PrivateRoute exact path="/design">
+                            <ChartDesign />
+                        </PrivateRoute>
+                        <PrivateRoute exact path="/slideshow">
+                            <SlideShow />
                         </PrivateRoute>
                         <Redirect exact from="/" to="/dashboard" />
                         {/* for future reference, nested routing won't work if the dashboard URL is /, that's why I changed it to dashboard */}

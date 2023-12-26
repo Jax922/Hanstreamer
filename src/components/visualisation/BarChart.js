@@ -48,6 +48,8 @@ export default function BarChart({ fileUrl, annotationEnabled }) {
             };
             const innerHeight = height - margin.top - margin.bottom;
             const innerWidth = width - margin.left - margin.right;
+
+            console.log("csv data inner--->", data)
             const xScale = d3
                 .scaleBand()
                 .domain(data.map((d) => d.date))
@@ -256,7 +258,7 @@ export default function BarChart({ fileUrl, annotationEnabled }) {
 
     return (
         <div>
-            <svg width={width} height={height} style={style} ref={svgRef} />
+            <svg width={width} height={height} style={style} ref={svgRef} className="h-chart" />
             <div
                 style={{
                     display: tooltipState.display,
